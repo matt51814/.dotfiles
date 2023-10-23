@@ -1,0 +1,20 @@
+# install.conf.yaml
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~']
+
+- link:
+    # Shell stuff
+    ~/.zshrc: shell/.zshrc
+
+    # Git
+    ~/.git: git/.gitconfig
+
+    # Apps
+    ~/.vscode: applications/.vscode
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
